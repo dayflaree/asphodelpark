@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Asphodel Park</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container about-page">
+        <!-- Background Image -->
+        <div class="background-image grid-background"></div>
+        
+        <!-- Custom Cursor -->
+        <div class="custom-cursor" id="custom-cursor">
+            <img src="resources/cursor.png" alt="Custom Cursor">
+        </div>
+        
+        <!-- Logo/Title Section -->
+                    <header class="header attractions-header">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="resources/logo.png" alt="Asphodel Park Logo" class="logo-image">
+                    </a>
+                </div>
+            </header>
+        
+        <!-- Navigation Menu -->
+        <nav class="navigation attractions-navigation">
+            <ul class="nav-list horizontal-nav">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="attractions.html" class="nav-link">Discovery</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="archives.html" class="nav-link">Archives</a></li>
+                <li><a href="about.html" class="nav-link active">About Asphodel Park</a></li>
+                <li><a href="booking.html" class="nav-link">Online Booking</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Page Title -->
+        <div class="page-title">
+            <h2>About Asphodel Park</h2>
+        </div>
+        
+        <!-- Main Content Area -->
+        <main class="main-content attractions-content">
+            <!-- About Image -->
+            <div class="about-image-container">
+                <img src="resources/asphodelpark.png" alt="Asphodel Park" class="about-main-image">
+            </div>
+            
+            <!-- About Text Content -->
+            <div class="about-text-content">
+                <p>Asphodel Park was founded in 1932 in the wooded outskirts near Yellow Creek State Park in Indiana County, Pennsylvania. Its origins trace back to 1924, when three siblings from a close-knit family opened The Shattered Hall, a small rented theater where they staged circus acts and live performances. The success of those shows inspired the siblings to expand, eventually transforming their vision into a full amusement park.</p>
+                
+                <p>From its opening day, Asphodel Park blended classic entertainment with bold attractions, including the reimagined Shattered Hall as the park's central theater. Over the decades, it has grown into a beloved destination, home to thrilling rides, expansive arcades, and family-friendly spectacles.</p>
+                
+                <p>Today, Asphodel Park continues to operate under the stewardship of the founding family, welcoming guests from across the country and maintaining its reputation as a thriving, joyful escape.</p>
+            </div>
+
+            <!-- About Video -->
+            <div class="about-video-container">
+                <video class="about-video" src="resources/walk.mp4" controls controlsList="nodownload noplaybackrate noremoteplayback nofullscreen" disablepictureinpicture oncontextmenu="return false;" playsinline></video>
+            </div>
+        </main>
+        
+        <!-- Bottom Content -->
+        <div class="bottom-content">
+            <h2 class="bottom-title">Where All Things Come Together!</h2>
+            <div class="bottom-graphic">
+                <img src="resources/face.png" alt="Face Graphic" class="face-image" id="face-image-about" data-page="about">
+            </div>
+            <p class="bottom-copyright">&copy; 2024 Asphodel Park (1932)</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Booking - Asphodel Park</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container booking-page">
+        <!-- Background Image -->
+        <div class="background-image grid-background"></div>
+        
+        <!-- Custom Cursor -->
+        <div class="custom-cursor" id="custom-cursor">
+            <img src="resources/cursor.png" alt="Custom Cursor">
+        </div>
+        
+        <!-- Logo/Title Section -->
+        <header class="header attractions-header">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="resources/logo.png" alt="Asphodel Park Logo" class="logo-image">
+                </a>
+            </div>
+        </header>
+        
+        <!-- Navigation Menu -->
+        <nav class="navigation attractions-navigation">
+            <ul class="nav-list horizontal-nav">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="attractions.html" class="nav-link">Discovery</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="archives.html" class="nav-link">Archives</a></li>
+                <li><a href="about.html" class="nav-link">About Asphodel Park</a></li>
+                <li><a href="booking.html" class="nav-link active">Online Booking</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Page Title -->
+        <div class="page-title">
+            <h2>Online Booking</h2>
+        </div>
+        
+        <!-- Main Content Area -->
+        <main class="main-content attractions-content">
+            <div class="tickets-container">
+                <div class="ticket-card">
+                    <div class="ticket-image">
+                        <img src="resources/ticket.png" alt="Standard Ticket" class="ticket-img">
+                    </div>
+                    <div class="ticket-content">
+                        <h3 class="ticket-title">Standard Ticket</h3>
+                        <div class="ticket-price">$29.99 USD</div>
+                        <p class="ticket-description">Experience the magic of Asphodel Park with our essential entry pass. Perfect for first-time visitors and those seeking a classic amusement park adventure. Includes access to all basic attractions and shows during regular operating hours.</p>
+                        <button class="purchase-button">Purchase Ticket</button>
+                    </div>
+                </div>
+                
+                <div class="ticket-card">
+                    <div class="ticket-image">
+                        <img src="resources/ticket.png" alt="Advanced Ticket" class="ticket-img">
+                    </div>
+                    <div class="ticket-content">
+                        <h3 class="ticket-title">Advanced Ticket</h3>
+                        <div class="ticket-price">$49.99 USD</div>
+                        <p class="ticket-description">Elevate your park experience with priority access to all attractions. Skip the regular lines and enjoy exclusive fast-pass privileges throughout your visit. Ideal for thrill-seekers who want to maximize their time on the most popular rides.</p>
+                        <button class="purchase-button">Purchase Ticket</button>
+                    </div>
+                </div>
+                
+                <div class="ticket-card">
+                    <div class="ticket-image">
+                        <img src="resources/ticket.png" alt="Premium Ticket" class="ticket-img">
+                    </div>
+                    <div class="ticket-content">
+                        <h3 class="ticket-title">Premium Ticket</h3>
+                        <div class="ticket-price">$89.99 USD</div>
+                        <p class="ticket-description">The ultimate Asphodel Park experience with unlimited access and premium privileges. Enjoy fast-pass entry to all attractions, extended park hours, exclusive shows, and priority seating at restaurants. Perfect for those who demand the very best.</p>
+                        <button class="purchase-button">Purchase Ticket</button>
+                    </div>
+                </div>
+                
+                <div class="ticket-card showtime-ticket">
+                    <div class="ticket-image">
+                        <img src="resources/ticket2.png" alt="Showtime Ticket" class="ticket-img">
+                    </div>
+                    <div class="ticket-content">
+                        <h3 class="ticket-title">Showtime Ticket</h3>
+                        <div class="ticket-price">$199.99 USD</div>
+                        <p class="ticket-description">Experience the legendary Circus performances that have defined Asphodel Park's most mysterious nights. Witness trapeze artists soaring to impossible heights and elaborate productions with entire menageries of animals.</p>
+                        <button class="purchase-button">Purchase Ticket</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Bottom Content -->
+        <div class="bottom-content">
+            <h2 class="bottom-title">Where All Things Come Together!</h2>
+            <div class="bottom-graphic">
+                <img src="resources/face.png" alt="Face Graphic" class="face-image" id="face-image-booking" data-page="booking">
+            </div>
+            <p class="bottom-copyright">&copy; 2024 Asphodel Park (1932)</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

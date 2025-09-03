@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asphodel Park</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Background Image -->
+        <div class="background-image"></div>
+        
+        <!-- Background Music -->
+        <audio autoplay loop volume="0.3" id="background-music">
+            <source src="resources/safe.wav" type="audio/wav">
+        </audio>
+        
+        <!-- Custom Cursor -->
+        <div class="custom-cursor" id="custom-cursor">
+            <img src="resources/cursor.png" alt="Custom Cursor">
+        </div>
+        
+        <!-- Particle Effects -->
+        <div class="particles" id="particles"></div>
+        
+        <!-- Logo/Title Section -->
+        <header class="header">
+            <div class="logo">
+                <img src="resources/logo.png" alt="Asphodel Park Logo" class="logo-image">
+            </div>
+        </header>
+        
+        <!-- Navigation Menu -->
+        <nav class="navigation">
+            <ul class="nav-list">
+                <li><a href="#" class="nav-link active">Home</a></li>
+                <li><a href="attractions.html" class="nav-link">Discovery</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="archives.html" class="nav-link">Archives</a></li>
+                <li><a href="about.html" class="nav-link">About Asphodel Park</a></li>
+                <li><a href="booking.html" class="nav-link">Online Booking</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Main Content Area -->
+        <main class="main-content">
+        </main>
+        
+
+        
+        <!-- Speaker Control -->
+        <div class="speaker-control">
+            <img src="resources/speaker_on.png" alt="Speaker Control" class="speaker-icon" id="speaker-icon">
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

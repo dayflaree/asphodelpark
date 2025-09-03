@@ -1,0 +1,1460 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Exo 2', sans-serif;
+    background-color: transparent;
+    color: #ffffff;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* Custom Cursor */
+.custom-cursor {
+    position: fixed;
+    width: 32px;
+    height: 32px;
+    pointer-events: none;
+    z-index: 9999;
+    display: none;
+}
+
+.custom-cursor img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.custom-cursor.pointer img {
+    content: url('resources/cursor2.png');
+}
+
+/* Hide default cursor on clickable elements */
+a, button, .nav-link, .logo-image, .speaker-icon, .speaker-control, .navigation, .thumbnail, .gallery-arrow, .close-button, .submit-button {
+    cursor: none !important;
+}
+
+/* Hide default cursor on scrollbars and scrollable elements */
+::-webkit-scrollbar {
+    cursor: none !important;
+}
+
+::-webkit-scrollbar-track {
+    cursor: none !important;
+}
+
+::-webkit-scrollbar-thumb {
+    cursor: none !important;
+}
+
+::-webkit-scrollbar-button {
+    cursor: none !important;
+}
+
+/* Hide cursor on all scrollable elements */
+* {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+/* Password Modal Styles */
+.password-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #000000;
+    border: 1px solid #ffffff;
+    padding: 3rem;
+    text-align: center;
+    position: relative;
+    min-width: 400px;
+}
+
+.close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 2rem;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.close-button:hover {
+    color: #cccccc;
+}
+
+.modal-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+.modal-instruction {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    color: #cccccc;
+    margin-bottom: 2rem;
+}
+
+.password-input-container {
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.password-input-container label {
+    display: block;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.password-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 0.5rem 0;
+    outline: none;
+}
+
+.password-input::placeholder {
+    color: #666666;
+}
+
+.password-input.error {
+    border-bottom-color: #808080;
+}
+
+.submit-button {
+    background: #808080;
+    color: #ffffff;
+    border: none;
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background: #909090;
+}
+
+/* Error Message Styles */
+.error-message {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.1rem;
+    color: #808080;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+/* Archives Image Styles */
+.archives-image-container {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.archives-main-image {
+    width: 960px;
+    height: 540px;
+    object-fit: cover;
+}
+
+/* Archives content hidden by default */
+.archives-content {
+    display: block;
+}
+
+/* Archives Text Content Styles */
+.archives-text-content {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    line-height: 1.6;
+}
+
+.archives-text-content p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 2.5rem;
+    text-align: left;
+    line-height: 1.7;
+}
+
+.archives-inline-image {
+    float: right;
+    margin: 0 0 1rem 2rem;
+    text-align: center;
+}
+
+.archives-inline-image.left {
+    float: left;
+    margin: 0 2rem 1rem 0;
+}
+
+.archives-bottom-image {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.bottom-image {
+    width: 600px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Archives Navigation Styles */
+.archives-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.archives-nav-arrow {
+    background: none;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+    transition: all 0.3s ease;
+}
+
+.archives-nav-arrow:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+.page-counter {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+/* Archives Page Styles */
+.archives-page {
+    display: block;
+}
+
+.archives-page.active {
+    display: block;
+}
+
+/* Page 2 specific image sizing */
+#page-2 .inline-image {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+}
+
+#page-2 .archives-main-image {
+    width: 600px;
+    height: 338px;
+    object-fit: cover;
+}
+
+/* Ensure Page 2 navigation appears at the bottom */
+#page-2 .archives-navigation {
+    margin-top: 4rem;
+    clear: both;
+}
+
+/* Page 5 video and date styles */
+.archives-video-container {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.archives-video {
+    width: 600px;
+    height: auto;
+    max-width: 100%;
+}
+
+/* Ensure custom cursor persists over video and its native controls */
+.archives-video {
+    cursor: none !important;
+}
+
+/* WebKit-based browsers (Chrome, Edge, Safari) media controls */
+.archives-video::-webkit-media-controls,
+.archives-video::-webkit-media-controls-enclosure,
+.archives-video::-webkit-media-controls-panel,
+.archives-video::-webkit-media-controls-overflow-menu,
+.archives-video::-webkit-media-controls-overflow-button,
+.archives-video::-webkit-media-controls-play-button,
+.archives-video::-webkit-media-controls-pause-button,
+.archives-video::-webkit-media-controls-timeline,
+.archives-video::-webkit-media-controls-current-time-display,
+.archives-video::-webkit-media-controls-time-remaining-display,
+.archives-video::-webkit-media-controls-seek-back-button,
+.archives-video::-webkit-media-controls-seek-forward-button,
+.archives-video::-webkit-media-controls-mute-button,
+.archives-video::-webkit-media-controls-volume-slider,
+.archives-video::-webkit-media-controls-volume-slider-container,
+.archives-video::-webkit-media-controls-fullscreen-button,
+.archives-video::-webkit-media-controls-toggle-closed-captions-button,
+.archives-video::-webkit-media-controls-picture-in-picture-button,
+.archives-video::-webkit-media-controls-cast-button,
+.archives-video::-webkit-media-controls-track-controls {
+    cursor: none !important;
+}
+
+/* Hide volume and fullscreen controls (WebKit) */
+.archives-video::-webkit-media-controls-mute-button,
+.archives-video::-webkit-media-controls-volume-slider,
+.archives-video::-webkit-media-controls-volume-slider-container,
+.archives-video::-webkit-media-controls-fullscreen-button {
+    display: none !important;
+}
+
+.archives-date {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1rem;
+    color: #ffffff;
+    text-align: center;
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+/* Secret archives link should look like normal text */
+#secret-archives-link {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#secret-archives-link:hover,
+#secret-archives-link:focus,
+#secret-archives-link:visited {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Page 5 specific text centering */
+#page-5 .archives-text-content {
+    text-align: center;
+}
+
+#page-5 .archives-text-content p {
+    text-align: center;
+}
+
+/* About Page Styles */
+.about-image-container {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.about-main-image {
+    width: 960px;
+    height: 540px;
+    object-fit: cover;
+}
+
+.about-text-content {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    line-height: 1.6;
+}
+
+.about-text-content p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 2.5rem;
+    text-align: left;
+    line-height: 1.7;
+}
+
+/* About video styling */
+.about-video-container {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.about-video {
+    width: 600px;
+    height: auto;
+    max-width: 100%;
+    cursor: none !important;
+}
+
+/* Hide volume, options, and fullscreen for WebKit-based browsers */
+.about-video::-webkit-media-controls,
+.about-video::-webkit-media-controls-enclosure,
+.about-video::-webkit-media-controls-panel,
+.about-video::-webkit-media-controls-overflow-menu,
+.about-video::-webkit-media-controls-overflow-button,
+.about-video::-webkit-media-controls-play-button,
+.about-video::-webkit-media-controls-pause-button,
+.about-video::-webkit-media-controls-timeline,
+.about-video::-webkit-media-controls-current-time-display,
+.about-video::-webkit-media-controls-time-remaining-display,
+.about-video::-webkit-media-controls-seek-back-button,
+.about-video::-webkit-media-controls-seek-forward-button,
+.about-video::-webkit-media-controls-mute-button,
+.about-video::-webkit-media-controls-volume-slider,
+.about-video::-webkit-media-controls-volume-slider-container,
+.about-video::-webkit-media-controls-fullscreen-button,
+.about-video::-webkit-media-controls-toggle-closed-captions-button,
+.about-video::-webkit-media-controls-picture-in-picture-button,
+.about-video::-webkit-media-controls-cast-button,
+.about-video::-webkit-media-controls-track-controls {
+    cursor: none !important;
+}
+
+.about-video::-webkit-media-controls-mute-button,
+.about-video::-webkit-media-controls-volume-slider,
+.about-video::-webkit-media-controls-volume-slider-container,
+.about-video::-webkit-media-controls-fullscreen-button { 
+    display: none !important;
+}
+
+.inline-image {
+    width: 300px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Hide scrollbars but keep functionality */
+.gallery-thumbnails::-webkit-scrollbar {
+    display: none;
+}
+
+.container {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* Background Image */
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('resources/asphodelpark.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(0.6) saturate(0) contrast(1.1) blur(1px);
+    z-index: -2;
+}
+
+/* Grid Background for Attractions Page */
+.background-image.grid-background {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background-image: url('resources/grid.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    filter: brightness(0.3) saturate(0) contrast(1.2) !important;
+    z-index: -2 !important;
+}
+
+.background-image:not(.grid-background)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0.1) 0%,
+        rgba(25, 25, 25, 0.15) 50%,
+        rgba(0, 0, 0, 0.2) 100%
+    );
+    z-index: -1;
+}
+
+/* Header and Logo */
+.header {
+    position: relative;
+    z-index: 10;
+    padding: 3rem 0 0 3rem;
+    text-align: left;
+}
+
+
+
+.logo {
+    text-align: left;
+}
+
+.logo-image {
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
+    transform: rotate(-5deg) translateX(3rem);
+    transition: transform 0.3s ease;
+}
+
+.logo-image:hover {
+    transform: rotate(-5deg) translateX(3rem) scale(1.05);
+}
+
+/* Attractions Page Header */
+.attractions-header {
+    padding: 1rem 0 0 0;
+    text-align: center;
+}
+
+.attractions-header .logo {
+    text-align: center;
+}
+
+.attractions-header .logo-image {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    transform: none;
+    transition: transform 0.3s ease;
+}
+
+.attractions-header .logo-image:hover {
+    transform: scale(1.05);
+}
+
+/* Gallery Page Header */
+.gallery-header {
+    padding: 1rem 0 0 0;
+    text-align: center;
+}
+
+.gallery-header .logo {
+    text-align: center;
+}
+
+.gallery-header .logo-image {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    transform: none;
+    transition: transform 0.3s ease;
+}
+
+.gallery-header .logo-image:hover {
+    transform: scale(1.05);
+}
+
+/* Gallery Navigation */
+.gallery-navigation {
+    position: static;
+    transform: none;
+    width: 100%;
+    margin-top: 0;
+    text-align: center;
+}
+
+.gallery-content {
+    margin-top: 0;
+    text-align: left;
+    max-width: 1400px;
+    padding: 0;
+}
+
+/* Gallery Styles */
+.gallery-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.main-gallery-image {
+    position: relative;
+    margin-bottom: 2rem;
+    background: #000000;
+}
+
+.main-gallery-image img {
+    width: 100%;
+    height: 600px;
+    object-fit: contain;
+    display: block;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.gallery-nav-arrows {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+
+.gallery-arrow {
+    background: none;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: all 0.3s ease;
+}
+
+.gallery-arrow-left {
+    margin-left: -80px;
+}
+
+.gallery-arrow-right {
+    margin-right: -80px;
+}
+
+.gallery-arrow:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+.gallery-thumbnails {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding: 1rem 0;
+    max-width: 100%;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.thumbnail {
+    width: 100px;
+    height: 80px;
+    object-fit: contain;
+    border: 2px solid transparent;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: border-color 0.3s ease;
+}
+
+.thumbnail:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.thumbnail.active {
+    border-color: #ffffff;
+}
+
+.logo-text {
+    font-family: 'Orbitron', monospace;
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #ffffff;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    letter-spacing: 0.2em;
+}
+
+/* Star symbols in logo text */
+.logo-text::before {
+    content: '★';
+    color: #ffffff;
+    margin-right: 0.1em;
+}
+
+.logo-text::after {
+    content: '★';
+    color: #ffffff;
+    margin-left: 0.1em;
+}
+
+/* Navigation Menu */
+.navigation {
+    position: fixed;
+    top: 45%;
+    right: 12rem;
+    transform: translateY(-50%);
+    width: 200px;
+    background: none;
+    backdrop-filter: none;
+    border: none;
+    z-index: 20;
+}
+
+/* Horizontal Navigation for Attractions Page */
+.attractions-navigation {
+    position: static;
+    transform: none;
+    width: 100%;
+    margin-top: 0;
+    text-align: center;
+}
+
+.horizontal-nav {
+    flex-direction: row !important;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.horizontal-nav .nav-link {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    color: #666666;
+    transition: color 0.3s ease;
+    display: inline-block;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.horizontal-nav .nav-link:hover {
+    color: #cccccc;
+    background: none;
+    border: none;
+    transform: none;
+    box-shadow: none;
+}
+
+.horizontal-nav .nav-link.active {
+    color: #ffffff;
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.nav-link {
+    display: block;
+    padding: 0.8rem 1rem;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(0, 0, 0, 0.8);
+    transition: all 0.2s ease;
+    border-radius: 0;
+}
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: none;
+    box-shadow: none;
+}
+
+.nav-link.active {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(255, 255, 255, 1);
+    color: #000000;
+    box-shadow: none;
+}
+
+/* Page Title for Attractions */
+.page-title {
+    text-align: center;
+    margin: 2rem 0 0 0;
+    z-index: 10;
+    position: relative;
+}
+
+.page-title h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 4rem;
+    font-weight: 400;
+    color: #cccccc;
+    margin: 0;
+}
+
+/* Main Content Area */
+.main-content {
+    position: relative;
+    z-index: 10;
+    padding: 2rem 3rem;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.attractions-content {
+    margin-top: 0;
+    text-align: left;
+    max-width: 1400px;
+    padding: 0;
+}
+
+.welcome-message {
+    background: none;
+    border: none;
+    padding: 0;
+    margin-top: 4rem;
+}
+
+.welcome-message h2 {
+    font-family: 'Orbitron', monospace;
+    font-size: 2rem;
+    font-weight: 400;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    text-shadow: none;
+    animation: none;
+}
+
+.welcome-message p {
+    font-size: 1rem;
+    color: #cccccc;
+    line-height: 1.6;
+    text-shadow: none;
+}
+
+/* Footer */
+.footer {
+    position: fixed !important;
+    bottom: 2rem !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    text-align: center !important;
+    z-index: 10 !important;
+}
+
+.footer p {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-shadow: none;
+}
+
+/* Bottom Content Styles for Sub-pages */
+.bottom-content {
+    text-align: center;
+    padding: 4rem 0;
+    margin-top: 3rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+.bottom-graphic {
+    margin: 2rem 0;
+}
+
+.face-image {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.face-image:hover {
+    transform: scale(1.05);
+}
+
+.bottom-copyright {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-top: 2rem;
+}
+
+
+
+/* Speaker Control */
+.speaker-control {
+    position: fixed;
+    bottom: 1rem;
+    right: 2rem;
+    z-index: 20;
+    cursor: pointer;
+}
+
+.speaker-icon {
+    width: 100px;
+    height: 100px;
+    transition: transform 0.3s ease;
+}
+
+.speaker-icon:hover {
+    transform: scale(1.05);
+}
+
+/* Particle Effects - Falling Ashes */
+.particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 5;
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    animation: fall linear infinite;
+    will-change: transform, opacity;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    5% {
+        opacity: 0.8;
+    }
+    85% {
+        opacity: 0.6;
+    }
+    95% {
+        opacity: 0.2;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+/* Remove all animations and effects */
+@keyframes glow {
+    0%, 100% { text-shadow: none; }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 1; transform: none; }
+    100% { opacity: 1; transform: none; }
+}
+
+@keyframes float {
+    0%, 100% { transform: none; }
+}
+
+/* Rabbit Particle Effect */
+.rabbit-particle {
+    position: fixed;
+    color: #ffffff;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    pointer-events: none;
+    z-index: 15;
+    animation: rabbitFall 3s linear forwards;
+    will-change: transform, opacity;
+}
+
+@keyframes rabbitFall {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .logo-text {
+        font-size: 2.5rem;
+    }
+    
+    .navigation {
+        right: 1rem;
+        width: 150px;
+    }
+    
+    .nav-link {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.8rem;
+    }
+    
+    .main-content {
+        padding: 1rem 2rem;
+    }
+    
+    .welcome-message h2 {
+        font-size: 1.5rem;
+    }
+    
+    .horizontal-nav {
+        gap: 1rem;
+    }
+    
+    .horizontal-nav .nav-link {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .page-title h2 {
+        font-size: 2rem;
+        margin-left: 1rem;
+    }
+    
+    .attractions-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .attraction-frame {
+        padding: 1rem;
+    }
+    
+    .placeholder-image {
+        height: 150px;
+    }
+    
+    .attraction-title {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-text {
+        font-size: 2rem;
+    }
+    
+    .navigation {
+        position: static;
+        transform: none;
+        width: 100%;
+        margin-top: 2rem;
+    }
+    
+    .nav-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.3rem;
+    }
+    
+    .nav-link {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.75rem;
+    }
+    
+    .horizontal-nav {
+        gap: 0.5rem;
+    }
+    
+    .horizontal-nav .nav-link {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.8rem;
+    }
+    
+    .page-title h2 {
+        font-size: 1.5rem;
+        margin-left: 0.5rem;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Selection styling - updated to black and white */
+::selection {
+    background: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+}
+
+::-moz-selection {
+    background: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+}
+
+/* Attractions Grid */
+.attractions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin-top: 0;
+    padding: 0;
+}
+
+.attraction-frame {
+    text-align: center;
+    padding: 5rem;
+    width: 100%;
+}
+
+.attraction-image {
+    margin-bottom: 0;
+}
+
+.attraction-image-file {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+.placeholder-image {
+    width: 100%;
+    height: 400px;
+    background: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.attraction-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #ffffff;
+    margin: 0;
+    background: #000000;
+    padding: 1rem;
+}
+
+.ticket-description {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1rem;
+    color: #cccccc;
+    margin: 0;
+    background: #000000;
+    padding: 0.5rem 1rem 1rem 1rem;
+    line-height: 1.4;
+    text-align: center;
+}
+
+/* Ticket Booking Styles */
+.tickets-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.ticket-card {
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    width: 300px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.ticket-card:hover {
+    transform: translateY(-10px);
+    border-color: #cccccc;
+}
+
+.ticket-image {
+    margin-bottom: 1.5rem;
+}
+
+.ticket-img {
+    width: 220px;
+    height: 220px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.ticket-card:hover .ticket-img {
+    transform: scale(1.1);
+}
+
+.ticket-content {
+    text-align: left;
+}
+
+.ticket-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #ffffff;
+    margin: 0 0 0.5rem 0;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.ticket-price {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0 0 1rem 0;
+    text-align: center;
+    background: #808080;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+}
+
+.ticket-description {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 0.95rem;
+    color: #cccccc;
+    margin: 0 0 1.5rem 0;
+    line-height: 1.6;
+    text-align: left;
+    background: none;
+    padding: 0;
+}
+
+.purchase-button {
+    background: #808080;
+    color: #ffffff;
+    border: 2px solid #808080;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.purchase-button:hover {
+    background: #ffffff;
+    color: #000000;
+    border-color: #ffffff;
+    transform: scale(1.05);
+}
+
+/* Showtime ticket styling */
+.showtime-ticket {
+    max-width: 300px;
+}
+
+.showtime-ticket .ticket-img {
+    width: 220px;
+    height: 220px;
+}
+
+.showtime-ticket .ticket-description {
+    text-align: left;
+}
+
+/* Responsive design for tickets */
+@media (max-width: 768px) {
+    .tickets-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    
+    .ticket-card {
+        width: 280px;
+        padding: 1.2rem;
+    }
+    
+    .ticket-title {
+        font-size: 1.6rem;
+    }
+    
+    .ticket-description {
+        font-size: 0.9rem;
+    }
+    
+    .showtime-ticket {
+        max-width: 280px;
+    }
+}
+
+/* Warning Page Styles */
+.warning-container {
+    background: #000000;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.warning-modal {
+    background: #000000;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    padding: 3rem;
+    text-align: center;
+    position: relative;
+    min-width: 500px;
+    max-width: 700px;
+}
+
+.warning-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.warning-text {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.warning-text p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.warning-list {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin: 1.5rem 0;
+    padding-left: 2rem;
+}
+
+.warning-list li {
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
+}
+
+.warning-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.accept-button, .decline-button {
+    background: #808080;
+    color: #ffffff;
+    border: 2px solid #808080;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.accept-button:hover {
+    background: #ffffff;
+    color: #000000;
+    border-color: #ffffff;
+    transform: scale(1.05);
+}
+
+.decline-button:hover {
+    background: #ffffff;
+    color: #000000;
+    border-color: #ffffff;
+    transform: scale(1.05);
+}
+
+/* Custom cursor support for warning page */
+.warning-container .custom-cursor {
+    display: block;
+}
+
+.warning-container .custom-cursor.pointer img {
+    content: url('resources/cursor2.png');
+}
+
+/* Responsive design for warning page */
+@media (max-width: 768px) {
+    .warning-modal {
+        min-width: 90%;
+        padding: 2rem;
+    }
+    
+    .warning-title {
+        font-size: 2.5rem;
+    }
+    
+    .warning-text p, .warning-list {
+        font-size: 1rem;
+    }
+    
+    .warning-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .accept-button, .decline-button {
+        width: 100%;
+        max-width: 300px;
+    }
+}

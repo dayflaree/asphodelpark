@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Asphodel Park</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container attractions-page">
+        <!-- Background Image -->
+        <div class="background-image grid-background"></div>
+        
+        <!-- Custom Cursor -->
+        <div class="custom-cursor" id="custom-cursor">
+            <img src="resources/cursor.png" alt="Custom Cursor">
+        </div>
+        
+        <!-- Logo/Title Section -->
+                    <header class="header attractions-header">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="resources/logo.png" alt="Asphodel Park Logo" class="logo-image">
+                    </a>
+                </div>
+            </header>
+        
+        <!-- Navigation Menu -->
+        <nav class="navigation attractions-navigation">
+            <ul class="nav-list horizontal-nav">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="attractions.html" class="nav-link active">Discovery</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="archives.html" class="nav-link">Archives</a></li>
+                <li><a href="about.html" class="nav-link">About Asphodel Park</a></li>
+                <li><a href="booking.html" class="nav-link">Online Booking</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Page Title -->
+        <div class="page-title">
+            <h2>Explore Asphodel Park</h2>
+        </div>
+        
+        <!-- Main Content Area -->
+        <main class="main-content attractions-content">
+            <div class="attractions-grid">
+                <div class="attraction-frame">
+                    <div class="attraction-image">
+                        <img src="resources/funhouse.png" alt="Funhouse" class="attraction-image-file">
+                    </div>
+                    <h3 class="attraction-title">Funhouse</h3>
+                </div>
+                
+                <div class="attraction-frame">
+                    <div class="attraction-image">
+                        <img src="resources/shatteredhall.png" alt="Shattered Hall" class="attraction-image-file">
+                    </div>
+                    <h3 class="attraction-title">Shattered Hall</h3>
+                </div>
+                
+                <div class="attraction-frame">
+                    <div class="attraction-image">
+                        <img src="resources/arcade.png" alt="Arcade" class="attraction-image-file">
+                    </div>
+                    <h3 class="attraction-title">Arcade</h3>
+                </div>
+                
+                <div class="attraction-frame">
+                    <div class="attraction-image">
+                        <img src="resources/plaza.png" alt="Plaza" class="attraction-image-file">
+                    </div>
+                    <h3 class="attraction-title">Plaza</h3>
+                </div>
+                
+                <div class="attraction-frame">
+                    <div class="attraction-image">
+                        <img src="resources/ferriswheel.png" alt="Ferris Wheel" class="attraction-image-file">
+                    </div>
+                    <h3 class="attraction-title">Ferris Wheel</h3>
+                </div>
+                
+                <div class="attraction-frame">
+                    <div class="attraction-image">
+                        <img src="resources/coaster.png" alt="Coaster" class="attraction-image-file">
+                    </div>
+                    <h3 class="attraction-title">Coaster</h3>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Bottom Content -->
+        <div class="bottom-content">
+            <h2 class="bottom-title">Where All Things Come Together!</h2>
+            <div class="bottom-graphic">
+                <img src="resources/face.png" alt="Face Graphic" class="face-image" id="face-image-discovery" data-page="discovery">
+            </div>
+            <p class="bottom-copyright">&copy; 2024 Asphodel Park (1932)</p>
+        </div>
+    </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
