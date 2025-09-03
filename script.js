@@ -136,7 +136,7 @@ function handleNavigation(linkText) {
         case 'About Asphodel Park':
             window.location.href = 'about.html';
             break;
-        case 'Online Booking':
+        case 'Booking':
             window.location.href = 'booking.html';
             break;
         default:
