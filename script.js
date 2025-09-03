@@ -427,7 +427,9 @@ function setupArchivesPassword() {
         // Check if password is correct (you can change this logic)
         if (password === 'rabbit') {
             modal.style.display = 'none';
-            // Show archives content - specifically page 1
+            // Reveal protected archives content and show page 1
+            const protectedWrapper = document.getElementById('archives-protected');
+            if (protectedWrapper) protectedWrapper.style.display = 'block';
             const archivesPage = document.querySelector('#page-1');
             if (archivesPage) archivesPage.style.display = 'block';
         } else {

@@ -40,15 +40,17 @@
             </ul>
         </nav>
         
-        <!-- Page Title -->
-        <div class="page-title">
-            <h2>Asphodel Park Archives</h2>
-        </div>
-        
-        <!-- Main Content Area -->
-        <main class="main-content attractions-content archives-content">
+        <!-- Protected Archives Content (hidden until password entered) -->
+        <div id="archives-protected" style="display: none;">
+            <!-- Page Title -->
+            <div class="page-title">
+                <h2>Asphodel Park Archives</h2>
+            </div>
+            
+            <!-- Main Content Area -->
+            <main class="main-content attractions-content archives-content">
             <!-- Page 1 Content -->
-            <div class="archives-page" id="page-1" style="display: block;">
+            <div class="archives-page" id="page-1" style="display: none;">
                 <div class="archives-image-container">
                     <img src="resources/archives1.png" alt="Asphodel Park Archives" class="archives-main-image">
                 </div>
@@ -234,7 +236,17 @@
                     </video>
                 </div>
             </div>
-        </main>
+            </main>
+            
+            <!-- Bottom Content -->
+            <div class="bottom-content">
+                <h2 class="bottom-title">Where All Things Come Together!</h2>
+                <div class="bottom-graphic">
+                    <img src="resources/face.png" alt="Face Graphic" class="face-image" id="face-image-archives" data-page="archives">
+                </div>
+                <p class="bottom-copyright">&copy; 2024 Asphodel Park (1932)</p>
+            </div>
+        </div>
         
         <!-- Password Modal -->
         <div class="password-modal" id="password-modal">
@@ -251,15 +263,6 @@
                 <!-- Error Message (Hidden by default) -->
                 <p class="error-message" id="error-message" style="display: none;">Please enter the correct password.</p>
             </div>
-        </div>
-        
-        <!-- Bottom Content -->
-        <div class="bottom-content">
-            <h2 class="bottom-title">Where All Things Come Together!</h2>
-            <div class="bottom-graphic">
-                <img src="resources/face.png" alt="Face Graphic" class="face-image" id="face-image-archives" data-page="archives">
-            </div>
-            <p class="bottom-copyright">&copy; 2024 Asphodel Park (1932)</p>
         </div>
     </div>
     </div>
